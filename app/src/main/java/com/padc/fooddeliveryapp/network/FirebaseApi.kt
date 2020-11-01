@@ -20,4 +20,6 @@ interface FirebaseApi {
     fun getOrders(onSuccess: (List<BurgerVO>) -> Unit, onFailure: (String) -> Unit)
 
     fun deleteOrderByName(name: String)
+
+    fun deleteAllOrder(orderList:List<BurgerVO>)
 }

@@ -142,4 +142,21 @@ object FireStoreImpls : FirebaseApi {
                     }
                     .addOnFailureListener{Log.d("onFailure","Failed to delete Grocery")}
     }
+
+    override fun deleteAllOrder(orderList: List<BurgerVO>) {
+        for (data in orderList){
+            data.name?.let {
+                db.collection("basket")
+                        .document(it)
+                        .delete()
+                        .addOnSuccessListener {
+                            Log.d("success","Successfully delete grocery")
+                        }
+                        .addOnFailureListener{Log.d("onFailure","Failed to delete Grocery")}
+            }
+        }
+
+    }
+
+
 }

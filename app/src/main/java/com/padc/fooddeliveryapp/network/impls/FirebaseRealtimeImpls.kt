@@ -59,4 +59,8 @@ object FirebaseRealtimeImpls : FirebaseApi {
     override fun deleteOrderByName(name: String) {
         TODO("Not yet implemented")
     }
+
+    override fun deleteAllOrder(orderList: List<BurgerVO>) {
+        TODO("Not yet implemented")
+    }
 }

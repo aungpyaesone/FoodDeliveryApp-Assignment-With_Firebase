@@ -21,6 +21,7 @@ class BasketActivity : BaseActivity(),OrderView {
     private lateinit var mPresenter: OrderPresenter
     private lateinit var mAdapter : OrderListAdapter
     private lateinit var mBottomSheet: BottomSheet
+    private var mOrderList:List<BurgerVO> = arrayListOf()
 
     companion object{
         fun newInstance(context: Context) = Intent(context,BasketActivity::class.java)
@@ -56,6 +57,7 @@ class BasketActivity : BaseActivity(),OrderView {
 
     override fun showOrderList(orderList: List<BurgerVO>) {
         mAdapter.setData(orderList)
+        mOrderList = orderList
     }
 
     @SuppressLint("SetTextI18n")
@@ -66,6 +68,7 @@ class BasketActivity : BaseActivity(),OrderView {
     override fun showBottomSheet() {
         mBottomSheet = BottomSheet.newInstance()
         mBottomSheet.show(supportFragmentManager,mBottomSheet.tag)
+        mBottomSheet.setOrderList(mOrderList)
     }
 
     override fun showLoading() {
