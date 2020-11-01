@@ -17,7 +17,7 @@
 
     <style name="Theme.Custom" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/first_color</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/text_color_pink</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
