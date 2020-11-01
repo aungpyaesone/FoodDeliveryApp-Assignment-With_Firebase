@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_small"
+    app:cardUseCompatPadding="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.padc.fooddeliveryapp.view.components.RoundedCornerImageView
+        android:id="@+id/ivRestaurant"
+        android:layout_width="@dimen/small_img"
+        android:layout_height="@dimen/small_img"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:src="@mipmap/ic_launcher"
+        app:cornerRadius="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="@string/super_good_cafe"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurant"
+        app:layout_constraintTop_toTopOf="@+id/ivRestaurant"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food"
+        app:layout_constraintStart_toStartOf="@+id/tvResName"
+        app:layout_constraintTop_toBottomOf="@+id/tvResName" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="4.9 (124 ratings)"
+        app:layout_constraintStart_toStartOf="@+id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/_16"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_3"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvResName" />
+
+    <include
+        android:id="@+id/itemViewPod"
+        layout="@layout/item_view_pod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRestaurant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurant"
+        app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

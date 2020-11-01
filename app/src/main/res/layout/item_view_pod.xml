@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padc.fooddeliveryapp.view.view_pods.ItemCountViewPod
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:text="0"
+        android:layout_toStartOf="@id/ivDecreased"
+        android:textSize="@dimen/text_regular_2"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/ivDecreased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:src="@drawable/ic_baseline_remove_24"
+        android:textSize="@dimen/text_regular_2"
+        android:layout_toStartOf="@id/ivDelete"
+        />
+
+    <ImageView
+        android:id="@+id/tvIncrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_toStartOf="@id/tvCount"
+         />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/ic_baseline_delete_24"/>
+
+
+</com.padc.fooddeliveryapp.view.view_pods.ItemCountViewPod>
